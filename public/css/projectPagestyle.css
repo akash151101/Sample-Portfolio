@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    transition: all 0.6s;
+    padding: 30px 15px;
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    /* background: none; */
+}
+
+.navbar .nav-link {
+    /* color: #fff; */
+    /* font-family: 'Merriweather', serif; */
+    font-weight: lighter;
+    padding: 0 35px;
+    /* font-weight: bold; */
+    /* letter-spacing: 23.6px; */
+    /* line-height: 70.8px; */
+    word-spacing: 0;
+    color: #000000;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    /* color: #4183d7; */
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    /* font-family: 'Merriweather', serif; */
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+    /* letter-spacing: 23.6px; */
+    /* line-height: 70.8px; */
+    word-spacing: 5px;
+    color: #000000;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #000000;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #000000;
+}
+
+.active-link{
+    color: aqua;
+}
+li .nav-link{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+li .nav-link:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  top: 135%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+li .nav-link:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+.project-div{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 120px;
+    z-index: 1;
+   
+}
+.project-head{
+    font-size: 20px;
+}
+.carousal-inner{
+    max-height: 200px !important;
+}
+
+ul.filters{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 30px 0;
+}
+
+ul.filters > li{
+    list-style: none;
+    display: inline-block;
+}
+
+ul.filters > li > a{
+    display: block;
+    color: #434e5e;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+ul.filters > li > a:hover{
+    background-color: #e6e9ed;
+}
+
+ul.filters > li.active > a{
+    color: #fff;
+    background-color: #03506f;
+}
+/* .item{
+    position: absolute;
+    left: 0;
+    top: 277.438px;
+    padding-bottom: 150px;
+    padding-top: 100px;
+} */
+.card{
+    position: relative;
+    margin-bottom: 50px;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 1px 1px 1.5px rgba(0,0,0,0.075);
+}
+
+.card-head{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    /* background-color: rgba(67,78,94,0.8); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :#fff;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.card-hover{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #03506f;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.card-body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4.title{
+    color: #eee;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.card-btn{
+    margin-bottom: -40px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card-btn:hover{
+    background-color: #03506f;
+    color: #fff;
+}
+
+.footer-div{
+    text-align: center;
+    justify-content: center;
+    background-color: #0a043c;
+    color: #fff;
+    margin-top: 100px;
+    padding: 30px 0;
+  }
+  .scroll-top{
+    background-color: #fff;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding-top: 12px;
+    margin: 0 auto;
+    color: #000000;
+    position: relative;
+    bottom: 50px;
+  }
+  .scroll-top:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .icons-div{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-div p{
+    margin-bottom: 30px;
+  }
+  .footer-div p:first-child{
+    margin: 0 0 25px;
+    padding: 10px 0;
+  }
+  .icon{
+    background: #262f38;
+    color: #222;
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: auto 2px;
+    margin-bottom: 15px;
+    padding-top: 5.7px;
+    /* padding-bottom: 15px; */
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+  }
+  a.icon:before{
+    font-family: "FontAwesome", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  a.facebook:before{
+    content: '\f09a';
+  }
+  a.twitter:before{
+    content: '\f099';
+  }
+  a.github:before{
+    content: '\f113';
+  }
+  a.dribble:before{
+    content: '\f17d';
+  }
+  a.pinterest:before{
+    content: '\f0e1 ';
+  }
+  
+  a span{
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: -25px;
+    right: -25px;
+    padding: 5px 7px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+  }
+  
+  a span:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 40px;
+  }
+  /* a:hover span{
+    bottom: 50px;
+    visibility: visible;
+    opacity: 1;
+  }
+   */
+  /* hover over the icons now to see the tooltips! */
+  a.facebook:hover{
+    background-color: #4183d7;
+    color: #000000;
+    text-decoration: none;
+  }
+  a.facebook span{
+    color: #4183d7;
+  }
+  a.twitter:hover{
+    background-color: #19b5fe;
+    color: #fff;
+    text-decoration: none;
+  }
+  a.twitter span{
+    color: #19b5fe;
+  }
+  a.github:hover{
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+  }
+  a.github span{
+    color: #000;
+  }
+  a.dribble:hover{
+    background-color: #f62459;
+    color: #fff;
+    text-decoration: none;
+  }
+  a.dribble span{
+    color: #f62459;
+  }
+  a.pinterest:hover{
+    background-color: #0e76a8;
+    color: #fff;
+    text-decoration: none;
+  }
+  a.pinterest span{
+    color: #0e76a8;
+  }

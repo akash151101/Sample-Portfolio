@@ -1,0 +1,132 @@
+
+
+</div>
+
+<div class="footer-div">
+    <a href="#" onclick="scrollToTop();return false">
+        <i class="fa fa-arrow-up scroll-top" aria-hidden="true"></i>
+    </a>
+    
+    <p>Living, learning, & leveling up <br> one day at a time.</p>
+    <!-- <div class="icons-div"> -->
+        <a href="http://www.facebook.com" target="_blank" class="icon facebook">
+      <span>Facebook</span></a>
+        <a href="http://www.twitter.com" target="_blank" class="icon twitter">
+      <span>Twitter</span></a>
+        <a href="http://www.github.com" target="_blank" class="icon github">
+      <span>GitHub</span></a>
+        <a href="http://www.dribble.com" target="_blank" class="icon dribble">
+      <span>Dribble</span></a>
+        <a href="http://www.pinterest.com" target="_blank" class="icon pinterest">
+      <span>Pinterest</span></a>
+    <!-- </div> -->
+      <hr>
+
+      <p style="margin-bottom: 0;">Akash © 2020. All Right Reserved, Designed By Portfolio Devop.</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/isotope.min.js"></script>
+<script src="js/script.js"></script>
+<!-- <script src="js/typed.js"></script> -->
+ 
+<script type="text/javascript">
+
+
+// var typed = new Typed('.animate', {
+//   strings: ["Web Developer.", "UI/UX Designer.", "Photography."],
+//   typeSpeed: 50,
+//   backSpeed: 50,
+//   loop: true,
+//   loopCount: Infinity,
+//   smartBackspace: true // Default value
+// });
+
+
+
+
+
+
+// const navbarStyle = document.getElementById("nav-div");
+// const loc = window.location.href;
+
+// var navchange = function(color){
+//   if(loc === "http://localhost:3000/projectPage"){
+//       console.log("hello");
+//       navbarStyle.style.background = color;
+//   }
+//   else{
+//     navbarStyle.style.background = color;
+//   }
+// }
+
+
+
+$(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active-item');
+            }
+        });
+    });
+
+$(function () {
+    $(window).on('scroll', function () {
+
+        
+        if ( $(window).scrollTop() > 200 ) {
+            $('.navbar').addClass('active');
+        } else {
+            $('.navbar').removeClass('active');
+        }
+    });
+
+});
+
+$(function() {
+  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active-link');
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // DOM elements
+  // const button = document.querySelector("button");
+  const quote = document.querySelector("blockquote p");
+  const cite = document.querySelector("blockquote cite");
+
+  async function updateQuote() {
+    // Fetch a random quote from the Quotable API
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    // console.log(response.status === 200);
+    if (response.status === 200) {
+      // Update DOM elements
+      if(data.content != null && data.author != null){
+        quote.textContent = data.content;
+        cite.textContent = data.author;
+      }
+    } else {
+      quote.textContent = "An error occured";
+      // console.log(data);
+    }
+  }
+
+  // Attach an event listener to the `button`
+  // button.addEventListener("click", updateQuote);
+
+  // call updateQuote once when page loads
+  updateQuote();
+});
+
+var timeOut;
+function scrollToTop() {
+  if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+    window.scrollBy(0,-50);
+    timeOut=setTimeout('scrollToTop()',10);
+  }
+  else clearTimeout(timeOut);
+}
+
+
+</script>
+
+</body>
+</html>

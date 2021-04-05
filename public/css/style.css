@@ -1,0 +1,81 @@
+
+/* Staring Page Styling*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    height: 100vh;
+}
+
+.video-background{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.welcome-msg{
+    position: absolute;
+    top: 190px;
+    left: 280px;   
+}
+.heading{
+    /* margin-bottom: 30px; */
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    font-size: 59px;
+    letter-spacing: 23.6px;
+    line-height: 70.8px;
+    word-spacing: 0;
+    /* background-color: #ffffff; */
+    background-position: 0% 0%;
+    color: #F3EDE9;
+    display: inline-block;
+
+}
+.para{
+    margin: 25px 0 65px;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    letter-spacing: 3.4px;
+    line-height: 25.5px;
+    word-spacing: 0;
+    color: #F3EDE9;
+    /* display: inline-block; */
+}
+
+.btn{
+    font-family: 'Merriweather', serif;
+    font-size: 10px;
+    word-spacing: 0;
+    background-color: #F3EDE9;
+    color: #000;
+    height: 40px;
+    width: 166px;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+   background-color: rgba(255,255,255,0);
+   cursor: pointer;
+   border: 2px solid #ffffff;
+   color: #ffffff;
+   border-radius: 0;
+}
+
+/* End of Starting Page Styling */
+
